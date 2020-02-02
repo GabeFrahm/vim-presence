@@ -21,4 +21,7 @@ def DiscordConnect():
     print("Achievement Get: Discord Connected!")
     
 def setPresence():
-    rp.update(state = f"Editing a {fileType} file!", details = "testing testing")
+    #largeImage = None
+    #if fileType in ['vim', 'python']: # Current supported images
+    #    largeImage = 'fileType'
+    rp.update(state = f'Editing a {fileType} file!', details = 'testing testing', large_image = fileType, small_image = 'vim')
