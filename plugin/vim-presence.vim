@@ -25,11 +25,11 @@ EOF
 
 " Functions
 function! FileType()
-  python3 sample.setFileType()
+  python3 sample.SetFileType()
 endfunction
 
 function! PrintFile()
-  python3 sample.printFile()
+  python3 sample.PrintFile()
 endfunction
 
 function! DiscordConnect()
@@ -37,12 +37,17 @@ function! DiscordConnect()
 endfunction
 
 function! SetPresence()
-  python3 sample.setPresence()
+  python3 sample.SetPresence()
+endfunction
+
+function! ClearPresence()
+  python3 sample.ClearPresence()
 endfunction
 
 " TODO: Put all functions as args under :rp
 " Commands
 command! -nargs=0 SetPresence call SetPresence()
+command! -nargs=0 ClearPresence call ClearPresence()
 
 " Autocmd group
 augroup pythonscripts
