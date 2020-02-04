@@ -23,10 +23,12 @@ def DiscordConnect():
     
 def SetPresence():
     rp.update(
-        state = f'Editing a {fileType} file!',
-        details = 'testing testing',
+        state = f'This is a stateeeee',
+        details = f'Editing a {fileType} file',
         large_image = fileType if fileType in files else 'default',
-        small_image = 'vim'
+        large_text = fileType,
+        small_image = 'vim',
+        small_text = 'Vim'
     )
 
 def ClearPresence():
