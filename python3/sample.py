@@ -34,10 +34,17 @@ def DiscordConnect():
     
 def SetPresence():
     rp.update(
+<<<<<<< HEAD
         state = modes[vim.eval('mode()')],
         details = f'Editing a {fileType} file!',
+=======
+        state = f'This is a stateeeee',
+        details = f'Editing a {fileType} file',
+>>>>>>> 9f3c70f8b5707d62511b87bc60e6cc2916b3e67b
         large_image = fileType if fileType in files else 'default',
-        small_image = 'vim'
+        large_text = fileType,
+        small_image = 'vim',
+        small_text = 'Vim'
     )
 
 def ClearPresence():
