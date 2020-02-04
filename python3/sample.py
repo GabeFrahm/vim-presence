@@ -6,7 +6,18 @@ from pypresence import Presence
 # Variables to feed into Discord
 rp = None           # Discord Client Class
 fileType = ''       # File Type
-files = ['vim', 'python']
+files = ['vim', 'python', 'test1']
+modes = {
+    'n': 'Normal',
+    'v': 'Visual',
+    'V': 'Visual-Line',
+    'CTRL-V': 'Visual-Block',
+    's': 'Select',
+    'S': 'Select-Line',
+    'CTRL-S': 'Select-Block',
+    'i': 'Insert',
+    'R': 'Replace'
+}
 
 def SetFileType(): # Puts vim '&filetype' variable into fileType
     global fileType
@@ -23,8 +34,8 @@ def DiscordConnect():
     
 def SetPresence():
     rp.update(
-        state = f'Editing a {fileType} file!',
-        details = 'testing testing',
+        state = modes[vim.eval('mode()')],
+        details = f'Editing a {fileType} file!',
         large_image = fileType if fileType in files else 'default',
         small_image = 'vim'
     )
