@@ -20,6 +20,9 @@ modes = {
     'R': 'REPLACE'
 }
 
+def vprint(args):
+    print(f'vim-presence: {args}')
+
 def SetFileType(): # Puts vim '&filetype' variable into fileType
     global fileType
     fileType = vim.eval('&filetype')
@@ -47,10 +50,10 @@ def SetPresence():
 
 def ClearPresence():
     rp.clear(pid=os.getpid())
-    print("Presence cleared")
+    vprint('Discord Presence cleared!')
 
 def Help():
-    print("TODO: Help command")
+    vprint('TODO: Help command')
 
 cmdKey = {
         'set'  : SetPresence,
@@ -58,9 +61,13 @@ cmdKey = {
         'help' : Help
         }
 
-def CmdHandler(arg):
-    if arg.lower() in cmdKey:
+def CmdHandler(arg=None):
+    if type(arg) == None:
+        print('vim-presence version 0.0.69. Use `:Vp help` for a list of commands')
+
+    elif (type(arg)) == str and arg.lower() in cmdKey: 
+        # First check required, because NoneType doesn't have a .lower method
         cmdKey[arg.lower()]()
     else:
-        print('vim-presence: Unrecognized command. Use `:vp help` for a list.')
+        vprint('Unrecognized command. Use `:Vp help` for a list.')
 

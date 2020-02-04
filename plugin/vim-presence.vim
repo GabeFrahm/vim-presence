@@ -50,7 +50,8 @@ command! -nargs=0 SetPresence call SetPresence()
 command! -nargs=0 ClearPresence call ClearPresence()
 
 " TODO: Work on python cmd handler
-command! -nargs=1 Vp py3 sample.CmdHandler(<f-args>) 
+command! -nargs=? Vp py3 sample.CmdHandler(<f-args>)
+" Above '?' means 0 or 1
 
 " Autocmd group
 augroup pythonscripts
