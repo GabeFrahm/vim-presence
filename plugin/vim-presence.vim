@@ -25,23 +25,23 @@ EOF
 
 " Functions
 function! FileType()
-  python3 sample.SetFileType()
+  py3 sample.SetFileType()
 endfunction
 
 function! PrintFile()
-  python3 sample.PrintFile()
+  py3 sample.PrintFile()
 endfunction
 
 function! DiscordConnect()
-  python3 sample.DiscordConnect()
+  py3 sample.DiscordConnect()
 endfunction
 
 function! SetPresence()
-  python3 sample.SetPresence()
+  py3 sample.SetPresence()
 endfunction
 
 function! ClearPresence()
-  python3 sample.ClearPresence()
+  py3 sample.ClearPresence()
 endfunction
 
 " TODO: Put all functions as args under :rp
@@ -54,6 +54,7 @@ augroup pythonscripts
   autocmd!
   autocmd FileType * call FileType()
   autocmd VimEnter * call DiscordConnect()
+  autocmd VimLeave * py3 sample.rp.close()
 augroup END
 
 let g:vim_presence_loaded = 1
