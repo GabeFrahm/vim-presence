@@ -8,15 +8,15 @@ rp = None           # Discord Client Class
 fileType = ''       # File Type
 files = ['vim', 'python', 'test1']
 modes = {
-    'n': 'Normal',
-    'v': 'Visual',
-    'V': 'Visual-Line',
-    'CTRL-V': 'Visual-Block',
-    's': 'Select',
-    'S': 'Select-Line',
-    'CTRL-S': 'Select-Block',
-    'i': 'Insert',
-    'R': 'Replace'
+    'n': 'NORMAL',
+    'v': 'VISUAL',
+    'V': 'V-LINE',
+    'CTRL-V': 'V-BLOCK',
+    's': 'SELECT',
+    'S': 'S-LINE',
+    'CTRL-S': 'S-BLOCK',
+    'i': 'INSERT',
+    'R': 'REPLACE'
 }
 
 def SetFileType(): # Puts vim '&filetype' variable into fileType
@@ -37,9 +37,10 @@ def SetPresence():
         state = modes[vim.eval('mode()')],
         details = f'Editing a {fileType} file!',
         large_image = fileType if fileType in files else 'default',
-        large_text = fileType,
+        large_text = fileType if fileType in files else 'File!',
         small_image = 'vim',
-        small_text = 'Vim'
+        small_text = 'Vim',
+        party_size = [int(vim.eval('line(".")')), int(vim.eval('line("$")'))]
     )
 
 def ClearPresence():
