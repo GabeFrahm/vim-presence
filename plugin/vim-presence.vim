@@ -44,10 +44,13 @@ function! ClearPresence()
   py3 sample.ClearPresence()
 endfunction
 
-" TODO: Put all functions as args under :rp
+" TODO: Put all functions as args under :rp (ex: :rp set, :rp clear)
 " Commands
 command! -nargs=0 SetPresence call SetPresence()
 command! -nargs=0 ClearPresence call ClearPresence()
+
+" TODO: Work on python cmd handler
+command! -nargs=1 Vp py3 sample.CmdHandler(<f-args>) 
 
 " Autocmd group
 augroup pythonscripts
