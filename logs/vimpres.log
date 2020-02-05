@@ -1,0 +1,125 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.028  000.028: --- VIM STARTING ---
+000.372  000.344: Allocated generic buffers
+000.631  000.259: locale set
+000.647  000.016: window checked
+001.859  001.212: inits 1
+001.954  000.095: parsing arguments
+001.957  000.003: expanding arguments
+002.055  000.098: shell init
+002.997  000.942: Termcap init
+003.062  000.065: inits 2
+003.477  000.415: init highlight
+004.479  000.690  000.690: sourcing /usr/share/vim/vimfiles/archlinux.vim
+004.561  000.984  000.294: sourcing /etc/vimrc
+008.408  002.778  002.778: sourcing /usr/share/vim/vim81/syntax/syncolor.vim
+008.814  003.384  000.606: sourcing /usr/share/vim/vim81/syntax/synload.vim
+029.556  000.066  000.066: sourcing /usr/share/vim/vimfiles/ftdetect/PKGBUILD.vim
+029.682  000.063  000.063: sourcing /usr/share/vim/vimfiles/ftdetect/conkyrc.vim
+029.871  000.138  000.138: sourcing /usr/share/vim/vimfiles/ftdetect/task.vim
+030.138  021.164  020.897: sourcing /usr/share/vim/vim81/filetype.vim
+030.243  025.027  000.479: sourcing /usr/share/vim/vim81/syntax/syntax.vim
+030.387  000.038  000.038: sourcing /usr/share/vim/vim81/filetype.vim
+030.616  000.114  000.114: sourcing /usr/share/vim/vim81/ftplugin.vim
+035.745  004.739  004.739: sourcing /home/gabe/.vim/autoload/plug.vim
+040.271  001.193  001.193: sourcing /usr/share/vim/vim81/ftoff.vim
+062.393  000.845  000.845: sourcing /home/gabe/repos/private/vim/plugged/vim-go/ftdetect/gofiletype.vim
+062.712  000.048  000.048: sourcing /usr/share/vim/vimfiles/ftdetect/PKGBUILD.vim
+062.824  000.058  000.058: sourcing /usr/share/vim/vimfiles/ftdetect/conkyrc.vim
+062.993  000.119  000.119: sourcing /usr/share/vim/vimfiles/ftdetect/task.vim
+063.236  019.154  018.084: sourcing /usr/share/vim/vim81/filetype.vim
+063.558  000.037  000.037: sourcing /usr/share/vim/vim81/ftplugin.vim
+063.944  000.116  000.116: sourcing /usr/share/vim/vim81/indent.vim
+065.483  000.550  000.550: sourcing /usr/share/vim/vim81/syntax/syncolor.vim
+066.532  000.529  000.529: sourcing /usr/share/vim/vim81/syntax/syncolor.vim
+088.005  023.766  022.687: sourcing /home/gabe/repos/private/vim/plugged/nord-vim/colors/nord.vim
+088.023  083.358  009.174: sourcing $HOME/.vimrc
+088.156  000.337: sourcing vimrc file(s)
+088.996  000.039  000.039: sourcing /usr/share/vim/vim81/filetype.vim
+089.380  000.038  000.038: sourcing /usr/share/vim/vim81/ftplugin.vim
+089.677  000.031  000.031: sourcing /usr/share/vim/vim81/indent.vim
+092.869  001.039  001.039: sourcing /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim
+093.008  002.000  000.961: sourcing /usr/share/vim/vim81/macros/matchit.vim
+093.141  004.505  002.397: sourcing /home/gabe/repos/private/vim/plugged/vim-sensible/plugin/sensible.vim
+094.748  001.385  001.385: sourcing /home/gabe/repos/private/vim/plugged/auto-pairs/plugin/auto-pairs.vim
+110.132  015.130  015.130: sourcing /home/gabe/repos/private/vim/plugged/nerdcommenter/plugin/NERD_commenter.vim
+111.182  000.052  000.052: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/autoloclist.vim
+111.276  000.036  000.036: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/balloons.vim
+111.362  000.034  000.034: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/checker.vim
+111.446  000.033  000.033: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/cursor.vim
+111.530  000.033  000.033: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/highlighting.vim
+111.614  000.033  000.033: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/loclist.vim
+111.700  000.036  000.036: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/modemap.vim
+111.796  000.035  000.035: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/notifiers.vim
+111.883  000.033  000.033: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/registry.vim
+111.967  000.033  000.033: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/signs.vim
+114.393  001.784  001.784: sourcing /home/gabe/repos/private/vim/plugged/syntastic/autoload/syntastic/util.vim
+126.536  000.072  000.072: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/autoloclist.vim
+126.628  000.067  000.067: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/balloons.vim
+126.847  000.199  000.199: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/checker.vim
+126.967  000.097  000.097: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/cursor.vim
+127.074  000.085  000.085: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/highlighting.vim
+127.396  000.302  000.302: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/loclist.vim
+127.507  000.089  000.089: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/modemap.vim
+127.601  000.073  000.073: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/notifiers.vim
+127.977  000.356  000.356: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/registry.vim
+128.102  000.102  000.102: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic/signs.vim
+129.078  016.994  013.768: sourcing /home/gabe/repos/private/vim/plugged/syntastic/plugin/syntastic.vim
+129.690  000.113  000.113: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/init.vim
+130.173  000.104  000.104: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/parts.vim
+131.481  000.196  000.196: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/util.vim
+131.567  002.389  001.976: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/plugin/airline.vim
+132.312  000.494  000.494: sourcing /home/gabe/repos/private/vim/plugged/vim-go/autoload/go/config.vim
+133.182  000.423  000.423: sourcing /home/gabe/repos/private/vim/plugged/vim-go/autoload/go/util.vim
+133.217  001.539  000.622: sourcing /home/gabe/repos/private/vim/plugged/vim-go/plugin/go.vim
+212.120  078.803  078.803: sourcing /home/gabe/.vim/plugged/vim-presence/plugin/vim-presence.vim
+213.094  000.853  000.853: sourcing /usr/share/vim/vimfiles/plugin/fzf.vim
+213.464  000.083  000.083: sourcing /usr/share/vim/vim81/plugin/getscriptPlugin.vim
+213.750  000.260  000.260: sourcing /usr/share/vim/vim81/plugin/gzip.vim
+214.236  000.457  000.457: sourcing /usr/share/vim/vim81/plugin/logiPat.vim
+214.312  000.049  000.049: sourcing /usr/share/vim/vim81/plugin/manpager.vim
+214.592  000.257  000.257: sourcing /usr/share/vim/vim81/plugin/matchparen.vim
+215.398  000.779  000.779: sourcing /usr/share/vim/vim81/plugin/netrwPlugin.vim
+215.453  000.020  000.020: sourcing /usr/share/vim/vim81/plugin/rrhelper.vim
+215.516  000.034  000.034: sourcing /usr/share/vim/vim81/plugin/spellfile.vim
+215.749  000.205  000.205: sourcing /usr/share/vim/vim81/plugin/tarPlugin.vim
+215.886  000.104  000.104: sourcing /usr/share/vim/vim81/plugin/tohtml.vim
+216.193  000.259  000.259: sourcing /usr/share/vim/vim81/plugin/vimballPlugin.vim
+216.459  000.226  000.226: sourcing /usr/share/vim/vim81/plugin/zipPlugin.vim
+216.465  003.620: loading plugins
+216.524  000.059: loading packages
+216.554  000.030: loading after plugins
+216.567  000.013: inits 3
+217.183  000.616: reading viminfo
+217.193  000.010: setting raw mode
+217.206  000.013: start termcap
+217.237  000.031: clearing screen
+218.420  000.485  000.485: sourcing /home/gabe/repos/private/vim/plugged/syntastic/autoload/syntastic/log.vim
+219.165  000.547  000.547: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions.vim
+219.455  000.130  000.130: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/quickfix.vim
+220.023  000.471  000.471: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline.vim
+220.300  000.094  000.094: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/netrw.vim
+220.761  000.163  000.163: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/section.vim
+221.535  000.516  000.516: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/highlighter.vim
+221.827  001.383  000.704: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/term.vim
+222.308  000.125  000.125: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/syntastic.vim
+222.770  000.282  000.282: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim
+223.316  000.147  000.147: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/po.vim
+223.651  000.199  000.199: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/wordcount.vim
+223.917  000.063  000.063: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/keymap.vim
+230.753  000.180  000.180: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/themes.vim
+231.174  000.780  000.600: sourcing /home/gabe/repos/private/vim/plugged/nord-vim/autoload/airline/themes/nord.vim
+254.791  000.380  000.380: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/builder.vim
+255.308  000.107  000.107: sourcing /home/gabe/repos/private/vim/plugged/vim-airline/autoload/airline/extensions/default.vim
+310.318  087.888: opening buffers
+312.122  001.804: BufEnter autocommands
+312.125  000.003: editing files in windows
+978.619  666.494: VimEnter autocommands
+978.624  000.005: before starting main loop
+985.675  007.051: first screen update
+985.679  000.004: --- VIM STARTED ---

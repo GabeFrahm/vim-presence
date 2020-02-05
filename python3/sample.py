@@ -1,6 +1,8 @@
 # TODO: Spectate button opens gotty
 import vim
 import os
+import time
+
 from pypresence import Presence
 
 # Variables to feed into Discord
@@ -44,7 +46,7 @@ def SetPresence():
         large_text = fileType if fileType in files else 'File!',
         small_image = 'vim',
         small_text = 'Vim',
-        #party_size = [int(vim.eval('line(".")')), int(vim.eval('line("$")'))]
+        #party_size = [int(vim.eval('line(".")')), int(vim.eval('line("$")'))] # May create issue of long player list
         party_size = [1,5] # TEST WITH RYAN LATER
     )
 
