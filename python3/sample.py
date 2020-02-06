@@ -21,11 +21,10 @@ modes = {
     'i': 'INSERT',
     'R': 'REPLACE'
 }
-
 def vprint(args):
     print(f'vim-presence: {args}')
 
-def SetFileType(): # Puts vim '&filetype' variable into fileType
+def FileType(): # Puts vim '&filetype' variable into fileType
     global fileType
     fileType = vim.eval('&filetype')
 
@@ -49,6 +48,7 @@ def SetPresence():
         #party_size = [int(vim.eval('line(".")')), int(vim.eval('line("$")'))] # May create issue of long player list
         party_size = [1,5] # TEST WITH RYAN LATER
     )
+    vprint('status set!')
 
 def ClearPresence():
     rp.clear(pid=os.getpid())
@@ -64,12 +64,13 @@ cmdKey = {
         }
 
 def CmdHandler(arg=None):
-    if type(arg) == None:
+    if arg is None:
         print('vim-presence version 0.0.69. Use `:Vp help` for a list of commands')
 
     elif (type(arg)) == str and arg.lower() in cmdKey: 
         # First check required, because NoneType doesn't have a .lower method
         cmdKey[arg.lower()]()
     else:
+        print(type(arg))
         vprint('Unrecognized command. Use `:Vp help` for a list.')
 

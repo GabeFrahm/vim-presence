@@ -1,3 +1,4 @@
+" Checks -------------
 if !has('python3')
   echo 'you must have vim built with python3 support to support vim-presence'
   finish
@@ -7,7 +8,7 @@ if exists('g:vim_presence_loaded')
   finish
 endif
 
-" Saving plugin directory into a variable
+" Set plugin dir -----
 let s:plugin_root_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 python3 << EOF
@@ -23,41 +24,16 @@ sys.path.insert(0, pythonDir)
 import sample
 EOF
 
-" Functions
-function! FileType()
-  py3 sample.SetFileType()
-endfunction
+" Functions: EDIT, redundant. Call py3 sample.*function name*
 
-function! PrintFile()
-  py3 sample.PrintFile()
-endfunction
-
-function! DiscordConnect()
-  py3 sample.DiscordConnect()
-endfunction
-
-function! SetPresence()
-  py3 sample.SetPresence()
-endfunction
-
-function! ClearPresence()
-  py3 sample.ClearPresence()
-endfunction
-
-" TODO: Put all functions as args under :rp (ex: :rp set, :rp clear)
-" Commands
-command! -nargs=0 SetPresence call SetPresence()
-command! -nargs=0 ClearPresence call ClearPresence()
-
-" TODO: Work on python cmd handler
+" Command handler ----
 command! -nargs=? Vp py3 sample.CmdHandler(<f-args>)
-" Above '?' means 0 or 1
 
-" Autocmd group
+" Autocmds -----------
 augroup pythonscripts
   autocmd!
-  autocmd FileType * call FileType()
-  autocmd VimEnter * call DiscordConnect()
+  autocmd FileType * py3 sample.FileType()
+  autocmd VimEnter * py3 sample.DiscordConnect()
   autocmd VimLeave * py3 sample.rp.close()
 augroup END
 
