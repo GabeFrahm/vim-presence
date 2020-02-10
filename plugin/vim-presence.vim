@@ -21,20 +21,20 @@ pluginDir = vim.eval('s:plugin_root_dir')
 pythonDir = normpath(join(pluginDir, '..', 'python3'))
 sys.path.insert(0, pythonDir)
 
-import sample
+import vp
 EOF
 
-" Functions: EDIT, redundant. Call py3 sample.*function name*
+" Functions: EDIT, redundant. Call py3 vp.*function name*
 
 " Command handler ----
-command! -nargs=? Vp py3 sample.CmdHandler(<f-args>)
+command! -nargs=? Vp py3 vp.CmdHandler(<f-args>)
 
 " Autocmds -----------
 augroup pythonscripts
   autocmd!
-  autocmd FileType * py3 sample.FileType()
-  autocmd VimEnter * py3 sample.DiscordConnect()
-  autocmd VimLeave * py3 sample.rp.close()
+  autocmd FileType * py3 vp.FileType()
+  autocmd VimEnter * py3 vp.DiscordConnect()
+  autocmd VimLeave * py3 vp.rp.close()
 augroup END
 
 let g:vim_presence_loaded = 1
