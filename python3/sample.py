@@ -1,12 +1,15 @@
 # TODO: Spectate button opens gotty
 import vim
 import os
+import time
+
 from pypresence import Presence
 
 # Variables to feed into Discord
 rp = None           # Discord Client Class
 fileType = ''       # File Type
-files = ['vim', 'python', 'test1']
+files = ['go', 'java', 'javascript', 'python', 'vim'] # Current supported icons
+
 modes = {
     'n': 'NORMAL',
     'v': 'VISUAL',
@@ -18,19 +21,21 @@ modes = {
     'i': 'INSERT',
     'R': 'REPLACE'
 }
+def vprint(args):
+    print(f'vim-presence: {args}')
 
-def SetFileType(): # Puts vim '&filetype' variable into fileType
+def FileType(): # Puts vim '&filetype' variable into fileType
     global fileType
     fileType = vim.eval('&filetype')
 
-def PrintFile(): # DEBUG
-    print(fileType)
+#def PrintFile(): # DEBUG
+#    print(fileType)
 
 def DiscordConnect():
     global rp
     rp = Presence('672929723382235136') # Client ID
     rp.connect() # Start Handshake loop
-    print("Achievement Get: Discord Connected!")
+    #print("Achievement Get: Discord Connected!")
 
 def SetPresence():
     rp.update(
@@ -40,10 +45,32 @@ def SetPresence():
         large_text = fileType if fileType in files else 'File!',
         small_image = 'vim',
         small_text = 'Vim',
-        party_size = [int(vim.eval('line(".")')), int(vim.eval('line("$")'))]
+        #party_size = [int(vim.eval('line(".")')), int(vim.eval('line("$")'))] # May create issue of long player list
+        party_size = [1,5] # TEST WITH RYAN LATER
     )
+    vprint('status set!')
 
 def ClearPresence():
     rp.clear(pid=os.getpid())
-    print("Presence cleared")
+    vprint('Discord Presence cleared!')
+
+def Help():
+    vprint('TODO: Help command')
+
+cmdKey = {
+        'set'  : SetPresence,
+        'clear': ClearPresence,
+        'help' : Help
+        }
+
+def CmdHandler(arg=None):
+    if arg is None:
+        print('vim-presence version 0.0.69. Use `:Vp help` for a list of commands')
+
+    elif (type(arg)) == str and arg.lower() in cmdKey: 
+        # First check required, because NoneType doesn't have a .lower method
+        cmdKey[arg.lower()]()
+    else:
+        print(type(arg))
+        vprint('Unrecognized command. Use `:Vp help` for a list.')
 
