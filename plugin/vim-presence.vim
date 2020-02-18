@@ -34,7 +34,7 @@ augroup pythonscripts
   autocmd!
   autocmd FileType * py3 vp.FileType()
   autocmd VimEnter * py3 vp.DiscordConnect()
-  autocmd VimLeave * py3 vp.rp.close()
+  autocmd VimLeave * py3 vp.EndDiscord()
 augroup END
 
 let g:vim_presence_loaded = 1
