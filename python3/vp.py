@@ -62,6 +62,7 @@ def SetPresence():
         small_text = 'Vim',
         #party_size = [int(vim.eval('line(".")')), int(vim.eval('line("$")'))] # May create issue of long player list
         #party_size = [1,5] # TEST WITH RYAN LATER
+        start = time.time()
     )
     vprint('status set!')
 
